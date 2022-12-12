@@ -1,5 +1,5 @@
 function fillFields() {
-    const check = URLSearchParams(window.location.search);
+    const check = new URLSearchParams(window.location.search);
     const fn = check.get('fn');
     const address = check.get('ainfo');
     const city = check.get('city');
@@ -75,4 +75,6 @@ function fillFields() {
     } else {
         document.querySelectorAll('[value="' + state + '"]') = true
     }
-}
+};
+
+fillFields();
